@@ -1,7 +1,10 @@
 {
   "name": "adapt-walkgrove-challenge",
-  "version": "1.0.0",
-  "framework": ">=5",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/walkgrovedev/adapt-walkgrove-challenge.git"
+  },
+  "framework": "5",
   "homepage": "https://github.com/walkgrovedev/adapt-walkgrove-challenge.git",
   "component": "challenge",
   "displayName": "Challenge",
@@ -12,14 +15,14 @@
     "adapt-component"
   ],
   "license": "GPL-3.0",
-  "_release": "1.0.0",
+  "_release": "33a642abc4",
   "_resolution": {
-    "type": "version",
-    "tag": "v1.0.0",
-    "commit": "ee2952fedacf99c49eb56e093bd77647c8b15b99"
+    "type": "branch",
+    "branch": "master",
+    "commit": "33a642abc4c4e6d2f72609a052ae3741e422520a"
   },
   "_source": "git://github.com/walkgrovedev/adapt-walkgrove-challenge.git",
-  "_target": "1.0.0",
+  "_target": "*",
   "_originalSource": "adapt-walkgrove-challenge",
   "_direct": true
 }
