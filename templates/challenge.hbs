@@ -13,7 +13,7 @@
       {{#each _feedbacks}}
         <div class="challenge__feedback">
           <div>{{{content}}}</div>
-          <img class="{{_imageClass}}" src="{{_image}}" {{#if alt}}aria-label="{{alt}}"{{else}}aria-hidden="true" alt=""{{/if}} />
+          <img class="{{_imageClass}}" src="{{_image}}" {{#if alt}}aria-label="{{alt}}"{{else}}alt=""{{/if}} />
         </div>
       {{/each}}
     </div>
