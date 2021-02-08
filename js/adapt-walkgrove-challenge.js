@@ -41,6 +41,8 @@ define([
       });
 
       this._timeouts = timeVars;
+
+      this.$('.challenge__instruction-inner').a11y_focus();
     },
 
     checkIfResetOnRevisit: function() {
@@ -60,8 +62,10 @@ define([
       
       if (Adapt.device.screenSize !== 'small') {
         Adapt.scrollTo(this.$('.challenge__body-inner'), { duration: 400 });
+        this.$('.challenge__body-inner').a11y_focus();
       }else{
         Adapt.scrollTo(this.$('.challenge__instruction'), { duration: 400 });
+        this.$('.challenge__instruction-inner').a11y_focus();
       }
 
       //setTimeout(this.showNextQuestion(), this._nextTimer);
@@ -151,6 +155,8 @@ define([
       this._timeouts[this._questionIndex] = setTimeout(() => {this.timedOut()}, this._timer);
       this._questionIndex--;
 
+      this.$('.challenge__item').eq(this._questionIndex).a11y_focus();
+
       this._nextTimeout = setTimeout(() => {this.nextAction()}, this._nextTimer);
     },
 
@@ -174,6 +180,8 @@ define([
         }
       });
       this.$('.challenge__feedback').eq(fbackNum).addClass('is-answered');
+
+      this.$('.challenge__feedback').eq(fbackNum).a11y_focus();
       
       this.setCompletionStatus();
       this.$('.challenge__instruction-inner').html(this.model.get('ins3'));
